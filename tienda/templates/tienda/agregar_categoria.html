@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Agregar Categoría</title>
-</head>
-<body>
-    <h1>Agregar nueva categoría</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ formulario.as_p }}
-        <button type="submit">Guardar</button>
+{% extends 'tienda/base.html' %}
+
+{% block title %}Agregar categoría{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Agregar nueva categoría</h2>
+    <form method="post" class="card p-4 shadow-sm">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <button type="submit" class="btn btn-primary mt-3">Guardar categoría</button>
     </form>
-</body>
-</html>
+{% endblock %}

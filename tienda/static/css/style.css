@@ -1,0 +1,57 @@
+/* === COLORES BASE === */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background-color: #2c2c2c; /* fondo oscuro */
+}
+
+.navbar-brand {
+  color: #d6c59e !important; /* amarillo dorado */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #f0f0f0 !important;
+}
+
+.nav-link:hover {
+  color: #d6c59e !important;
+}
+
+/* Botones */
+.btn {
+  border-radius: 0.25rem;
+}
+
+.btn-primary {
+  background-color: #d6c59e;
+  color: #000;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #d6c59e;
+  color: #000;
+}
+
+/* Tarjetas */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Encabezados */
+h2, h3 {
+  color: #2c2c2c;
+}
+
+/* Márgenes */
+.mt-4, .mb-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}

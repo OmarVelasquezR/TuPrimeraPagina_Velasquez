@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Buscar Producto</title>
-</head>
-<body>
-    <h1>Buscar producto por nombre</h1>
+{% extends 'tienda/base.html' %}
 
-    <form method="get">
-        {{ formulario.as_p }}
-        <button type="submit">Buscar</button>
-    </form>
+{% block title %}Buscar producto{% endblock %}
 
-    {% if resultados %}
-        <h2>Resultados:</h2>
-        <ul>
-            {% for producto in resultados %}
-                <li>{{ producto.nombre }} - ${{ producto.precio }}</li>
-            {% endfor %}
-        </ul>
-    {% elif formulario.is_bound %}
-        <p>No se encontraron productos.</p>
-    {% endif %}
-</body>
-</html>
+{% block content %}
+  <h2 class="mb-4">Buscar producto</h2>
+
+  <form method="get" class="mb-4">
+    {{ formulario.as_p }}
+    <button type="submit" class="btn btn-primary mt-3">Buscar</button>
+  </form>
+
+  {% if resultados %}
+    <h3>Resultados encontrados:</h3>
+    <ul class="list-group">
+      {% for producto in resultados %}
+        <li class="list-group-item">
+          {{ producto.nombre }} – ${{ producto.precio }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% elif formulario.is_bound %}
+    <div class="alert alert-warning mt-4">No se encontraron productos.</div>
+  {% endif %}
+{% endblock %}

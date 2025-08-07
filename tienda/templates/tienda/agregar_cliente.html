@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Agregar Cliente</title>
-</head>
-<body>
-    <h1>Agregar nuevo cliente</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ formulario.as_p }}
-        <button type="submit">Guardar</button>
+{% extends 'tienda/base.html' %}
+
+{% block title %}Agregar cliente{% endblock %}
+
+{% block content %}
+    <h2 class="mb-4">Registrar nuevo cliente</h2>
+    <form method="post" class="card p-4 shadow-sm">
+    {% csrf_token %}
+    {{ formulario.as_p }}
+    <button type="submit" class="btn btn-primary mt-3">Registrar cliente</button>
     </form>
-</body>
-</html>
+{% endblock %}
