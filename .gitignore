@@ -1,0 +1,27 @@
+# Base de datos y archivos subidos
+db.sqlite3
+media/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+
+# Archivos de log
+*.log
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuraciones de editores
+.vscode/
+.idea/
+
+# Archivos temporales
+*.bak
+*.tmp
